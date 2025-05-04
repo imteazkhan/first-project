@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="asstes/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asstes/lightbox2-2.11.4/dist/css/lightbox.min.css">
+    <style>
+      /* Custom styles for header and footer */
+      .header {
+        background-color: #346444; /* Dark background */
+        color: rgb(87, 153, 102); /* White text */
+        padding: 10px 0;
+      }
+
+      .footer {
+        background-color: #346444; /* Dark background */
+        color: white; /* White text */
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      /* Add some spacing for the main content */
+      main {
+        padding: 20px 0;
+      }
+      /* Custom hover effect for navbar links */
+    .navbar-nav .nav-link {
+      position: relative;
+      color: white; /* Default text color */
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107; /* Text color on hover */
+    }
+
+    /* Optional: Add an underline effect on hover */
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #ffc107; /* Underline color */
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%; /* Expand underline on hover */
+    }
+     /* Card hover effect */
+     .card {
+      overflow: hidden; /* Ensures the image doesn't overflow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Slightly scale up the card */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    }
+
+    /* Image hover effect */
+    a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover img {
+    transform: scale(1.1);
+}
+
+    footer {
+      background-color: #135223;
+      color: white;
+      padding: 20px 0;
+    } 
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .footer-section {
+      flex: 1;
+      margin: 10px;
+      min-width: 200px;
+    }
+    .footer-section h2 {
+      border-bottom: 2px solid rgb(31, 109, 42);
+      padding-bottom: 5px;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+    .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-section.social a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 10px;
+    }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="fixed-top header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+              <img src="images/bloody36.png" alt="Logo" >
+            </a>
+            <!-- <a class="navbar-brand" href="home.html">Home</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav"> -->
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cause.html">Cause</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contribution.html">Contribution</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="shahid.html">List of Martyrs(Shahid)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- carousel start -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="2000"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/imge01.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/imge02.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/imge03.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- carousel end -->
+    <!-- Main Content -->
+    <main class="container">
+      <h1>July Shaheed'24</h1>
+      <p>This is the main content area. You can add your content here.</p>
+    </main>
+    <!-- images start -->
+    <div class="container">
+      <h3>Images of July Movement</h3>
+        <a href="images/july01.png" data-lightbox="mygallery" data-title="gallery 1 image 1">
+            <img src="images/july01.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july02.png" data-lightbox="mygallery" data-title="gallery 1 image 2">
+            <img src="images/july02.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july03 - Copy.png.png" data-lightbox="mygallery" data-title="gallery 1 image 3">
+            <img src="images/july03 - Copy.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july04 - Copy.png" data-lightbox="mygallery" data-title="gallery 1 image 4">
+            <img src="images/july04 - Copy.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july05 - Copy.png" data-lightbox="mygallery" data-title="gallery 1 image 5">
+            <img src="images/july05 - Copy.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july06.png" data-lightbox="mygallery" data-title="gallery 1 image 6">
+            <img src="images/july06.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july07.png" data-lightbox="mygallery" data-title="gallery 1 image 7">
+            <img src="images/july07.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july08.png" data-lightbox="mygallery" data-title="gallery 1 image 8">
+            <img src="images/july08.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july09.png" data-lightbox="mygallery" data-title="gallery 1 image 9">
+            <img src="images/july09.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july10.png" data-lightbox="mygallery" data-title="gallery 1 image 10">
+            <img src="images/july10.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july11.png" data-lightbox="mygallery" data-title="gallery 1 image 11">
+            <img src="images/july11.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july12.png" data-lightbox="mygallery" data-title="gallery 1 image 12">
+            <img src="images/july12.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july13.png" data-lightbox="mygallery" data-title="gallery 1 image 13">
+            <img src="images/july13.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july14.png" data-lightbox="mygallery" data-title="gallery 1 image 14">
+            <img src="images/july14.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july15.png" data-lightbox="mygallery" data-title="gallery 1 image 15">
+            <img src="images/july15.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july16.png" data-lightbox="mygallery" data-title="gallery 1 image 16">
+            <img src="images/july16.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july17.png" data-lightbox="mygallery" data-title="gallery 1 image 17">
+            <img src="images/july17.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july18.png" data-lightbox="mygallery" data-title="gallery 1 image 18">
+            <img src="images/july18.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july19.png" data-lightbox="mygallery" data-title="gallery 1 image 19">
+            <img src="images/july19.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july20.png" data-lightbox="mygallery" data-title="gallery 1 image 20">
+            <img src="images/july20.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july21.png" data-lightbox="mygallery" data-title="gallery 1 image 21">
+            <img src="images/july21.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july22.png" data-lightbox="mygallery" data-title="gallery 1 image 22">
+            <img src="images/july22.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july23.png" data-lightbox="mygallery" data-title="gallery 1 image 23">
+            <img src="images/july23.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july24.png" data-lightbox="mygallery" data-title="gallery 1 image 24">
+            <img src="images/july24.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july25.png" data-lightbox="mygallery" data-title="gallery 1 image 25">
+            <img src="images/july25.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july26.png" data-lightbox="mygallery" data-title="gallery 1 image 26">
+            <img src="images/july26.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july27.png" data-lightbox="mygallery" data-title="gallery 1 image 27">
+            <img src="images/july27.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july28.png" data-lightbox="mygallery" data-title="gallery 1 image 28">
+            <img src="images/july28.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july29.png" data-lightbox="mygallery" data-title="gallery 1 image 29">
+            <img src="images/july29.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <!-- <a href="images/july30.png" data-lightbox="mygallery" data-title="gallery 1 image 3">
+            <img src="images/july30.png" alt="" class="img-fluid" width="200px">
+        </a> -->
+        <a href="images/july31.png" data-lightbox="mygallery" data-title="gallery 1 image 31">
+            <img src="images/july31.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july02.png" data-lightbox="mygallery" data-title="gallery 1 image 32">
+            <img src="images/july02.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july03.png" data-lightbox="mygallery" data-title="gallery 1 image 33">
+            <img src="images/july03.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july01.png" data-lightbox="mygallery" data-title="gallery 1 image 34">
+            <img src="images/july01.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july02.png" data-lightbox="mygallery" data-title="gallery 1 image 35">
+            <img src="images/july02.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july03.png" data-lightbox="mygallery" data-title="gallery 1 image 36">
+            <img src="images/july03.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july01.png" data-lightbox="mygallery" data-title="gallery 1 image 37">
+            <img src="images/july01.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july02.png" data-lightbox="mygallery" data-title="gallery 1 image 38">
+            <img src="images/july02.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july03.png" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/july03.png" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last010.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last010.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last009.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last009.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last008.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last008.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last007.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last007.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last006.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last006.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last005.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last005.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last004.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last004.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last003.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last003.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last002.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last002.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last001.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last001.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last011.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last011.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last012.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last012.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last013.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last013.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last014.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last014.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last015.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last015.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/last016.jpg" data-lightbox="mygallery" data-title="gallery 1 image 39">
+            <img src="images/last016.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="images/july05 - Copy.png" data-lightbox="mygallery" data-title="gallery 1 image 5">
+          <img src="images/july05 - Copy.png" alt="" class="img-fluid" width="200px">
+      </a>
+      <a href="images/july06.png" data-lightbox="mygallery" data-title="gallery 1 image 6">
+          <img src="images/july06.png" alt="" class="img-fluid" width="200px">
+      </a>
+      <a href="images/july07.png" data-lightbox="mygallery" data-title="gallery 1 image 7">
+          <img src="images/july07.png" alt="" class="img-fluid" width="200px">
+      </a>
+      <a href="images/july08.png" data-lightbox="mygallery" data-title="gallery 1 image 8">
+          <img src="images/july08.png" alt="" class="img-fluid" width="200px">
+      </a>
+      <a href="images/july09.png" data-lightbox="mygallery" data-title="gallery 1 image 9">
+          <img src="images/july09.png" alt="" class="img-fluid" width="200px">
+      </a>
+        <!-- <h3>gallery 2</h3>
+        <a href="../assets/images/DSC_0004.jpg" data-lightbox="mygallery2" data-title="gallery 2 image 1">
+            <img src="../assets/images/DSC_0004.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="../assets/images/DSC_0005.jpg" data-lightbox="mygallery2" data-title="gallery 2 image 2">
+            <img src="../assets/images/DSC_0005.jpg" alt="" class="img-fluid" width="200px">
+        </a>
+        <a href="../assets/images/DSC_0006.jpg" data-lightbox="mygallery2" data-title="gallery 3 image 3">
+            <img src="../assets/images/DSC_0006.jpg" alt="" class="img-fluid" width="200px">
+        </a> -->
+        <br>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>We provide quality content and services to help you grow your business.</p>
+        </div>
+        
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email:  acbdef@xmail.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+        
+        <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <a href="#"><img src="images/fb.png" alt="Facebook"></a>
+          <a href="#"><img src="images/x.png" alt="Twitter"></a>
+          <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 YourCompany. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS (Optional, for toggling the navbar on small screens) -->
+
+    <script src="asstes/js/bootstrap.min.js"></script>
+    <script src="asstes/dist/js/jquery-3.7.1.min.js"></script>
+    <script src="asstes/dist/js/lightbox.min.js"></script>
+  </body>
+</html>

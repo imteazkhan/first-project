@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="asstes/css/bootstrap.min.css">
+<style>
+    /* Custom styles for header and footer */
+    .header {
+      background-color: #346444; /* Dark background */
+      color: rgb(87, 153, 102); /* White text */
+      padding: 10px 0;
+    }
+    /* Add some spacing for the main content */
+    main {
+      padding: 20px 0;
+    }
+    /* Custom hover effect for navbar links */
+    .navbar-nav .nav-link {
+      position: relative;
+      color: white; /* Default text color */
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ffc107; /* Text color on hover */
+    }
+
+    /* Optional: Add an underline effect on hover */
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #ffc107; /* Underline color */
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%; /* Expand underline on hover */
+    }
+    /* Card hover effect */
+    .card {
+      overflow: hidden; /* Ensures the image doesn't overflow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05); /* Slightly scale up the card */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    }
+
+    /* Image hover effect */
+    .card-img-top {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.1); /* Scale up the image */
+    }
+    /* Footer styles */
+    footer {
+      background-color: #135223;
+      color: white;
+      padding: 20px 0;
+    } 
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .footer-section {
+      flex: 1;
+      margin: 10px;
+      min-width: 200px;
+    }
+    .footer-section h2 {
+      border-bottom: 2px solid rgb(31, 109, 42);
+      padding-bottom: 5px;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-section ul li {
+      margin: 5px 0;
+    }
+    .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer-section.social a img {
+      width: 30px;
+      margin-right: 10px;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="fixed-top header">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <!-- Logo -->
+            <a class="navbar-brand" href="#">
+              <img src="images/bloody36.png" alt="Logo"
+            /></a>
+              <!-- <a class="navbar-brand" href="home.html">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav"> -->
+                <ul class="navbar-nav">
+                  <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="cause.html">Cause</a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contribution.html">Contribution</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shahid.html">List of Martyrs(Shahid)</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+  </header>
+  <!-- carousel start -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/imge01.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/imge02.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/imge03.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- carousel end -->
+
+  <!-- Main Content -->
+  <main class="container">
+    <h3>List of Martyrs(Shahid) in the Movenent</h3>
+    <br>
+    <p>These martyrs did not just give their lives; they gifted us a future free from the chains of autocracy. Their courage in the face of overwhelming adversity serves as a beacon of hope and a reminder of the power of unity and determination.</p>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/martyrs01.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Abu Sayed <br>
+                Student
+                Begum Rokeya University, Rangpur <br>
+                16th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid002.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Faisal Ahmed Shanto <br>
+                Student
+                Omargani M.E.S. College, Chittagong <br>
+                16th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid003.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Md. Wasim Akrum <br>
+                Student
+                Chittagong College, Chittagong <br>
+                16th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid004.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Tahmid Tamim <br>
+                Student
+                Qadir Mollah High School, Narsingdi <br>
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid005.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Shykh Aashhabul Yamin <br>
+                Student
+                Military Institute of Science and Technology <br>
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid006.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Jahiduzzaman Tanvin <br>
+                Student
+                Islamic University of Technology, Gazipur. <br>
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid007.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Farhan Faiyaaz <br>
+                Student
+                Dhaka Residential Model College, Mohammadpur <br>
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid008.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Irfan Bhuiyan <br>
+                Student
+                
+                United International University <br>
+                
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid009.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Mir Mugdho <br>
+                Student
+                
+                Bangladesh University of professionals <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid010.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Shah Newaz Fahad <br>
+                Student
+                
+                East West University <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid011.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Shakil Parvej <br>
+                Student
+                
+                Manarat International University <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid012.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Sheikh Fahmin Zafor <br>
+                Student
+                
+                Tongi Govt. College <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid013.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Zillur Sheikh <br>
+                Student
+                
+                Imperial College, Dhaka <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid014.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Zillur Sheikh <br>
+                Student
+                
+                Imperial College, Dhaka <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid015.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Rudro Sen <br>
+                Student
+                
+                Shahjalal University of Science and Technology, Sylhet <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid016.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Mehedi Hasan <br>
+                Journalist
+                
+                Dhaka Times <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid017.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Emon Ahmed <br>
+                18 years old, Palash Thana, Narsingdi Sadar Upazila. - Source: BBC Bangla <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid018.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Siam <br>
+                An employee at a battery shop in Gulistan. He was shot at Hanif Flyover during a clash while returning home at night. Source: Jugantor <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid019.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Khalid Hasan Saifullah <br>
+                Student
+                
+                Imperial College, Dhaka <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid020.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Asif Iqbal <br>
+                Student
+                
+                Independent University Bangladesh, Dhaka <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid021.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Hridoy Chandra Tarua <br>
+                Student
+                
+                University of Chittagong <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid022.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Rahat Hossain <br>
+                Student
+                
+                Nawab Habibullah Model School & College, Dhaka <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid023.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Dr. Sajib Sarker <br>
+                Doctor
+                
+                Tairunnessa Memorial Medical College & Hospital, Tongi <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid024.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Asif Hasan <br>
+                Student
+                
+                Northern University Bangladesh <br>
+                
+                18th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid025.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Mostofa Zaman Shomudro <br>
+                Student
+                
+                Ideal School And College, Banasree, Dhaka <br>
+                
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid026.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Abu Taher Md Turab <br>
+                Journalist
+                
+                Daily Jalalabad <br>
+                
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid027.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Abdul Goni <br>
+                Location: Rampura-Badda. <br>
+                
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid028.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Maruf Hossain <br>
+                Student
+                
+                Akota Degree College, Barisal <br>
+                
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid029.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Safkat Samir <br>
+                Student
+                
+                Class Five, Madharsha <br>
+                
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid030.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Mahabub Hasan Mamun <br>
+                Employee
+                bKash <br>
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid031.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Ridone Sagar <br>
+                Mymensingh commerce college <br>
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid032.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Arman Hossen Rustom <br>
+                Student
+                National Bangla High School <br>
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid033.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Md. Jihad Hosen <br>
+                Student
+                Kabi Nazrul Govt. College <br>
+                19th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid034.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Tahir Zaman Priyo <br>
+                Photo Journalist
+                Streets of Dhaka <br>
+                20th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid035.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Md. Mukttakin billah <br>
+                Lab Technologist
+                Enova diagnostic centre <br>
+                20th July, 2024</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="images/shahid036.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Shahid</h5>
+              <p class="card-text">Mahadi Hasan Pantho <br>
+                Student
+                Govt. Tolaram College, Narayanganj <br>
+                23th July, 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+            <button type="button" class="btn btn-outline-secondary">1</button>
+            <button type="button" class="btn btn-outline-secondary">2</button>
+            <button type="button" class="btn btn-outline-secondary">3</button>
+            <button type="button" class="btn btn-outline-secondary">4</button>
+        </div>
+    </div>
+    
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>We provide quality content and services to help you grow your business.</p>
+      </div>
+      
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section contact">
+        <h2>Contact Us</h2>
+        <p>Email:  acbdef@xmail.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+      
+      <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <a href="#"><img src="images/fb.png" alt="Facebook"></a>
+        <a href="#"><img src="images/x.png" alt="Twitter"></a>
+        <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 YourCompany. All Rights Reserved.</p>
+    </div>
+  </footer>
+  
+  
+    
+    
+ 
+  
+
+  <!-- Bootstrap JS (Optional, for toggling the navbar on small screens) -->
+  
+</body>
+</html>
+    <script src="asstes/js/bootstrap.min.js">
+
+    </script>
+</body>
+</html>
